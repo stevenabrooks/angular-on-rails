@@ -1,0 +1,17 @@
+<div ng-controller="TodoController">
+  <h2 id="forms-example">Total todos: {{getTotalTodos()}}</h2>
+  <ul>
+    <li ng-repeat="todo in todos | orderBy:'-importance'">
+      <input type="checkbox" ng-model="todo.done">
+      <span class="done-{{todo.done}}">{{todo.text}} - {{todo.importance}}</span>
+    </li>
+  </ul>
+  <form class="form-inline">
+    <input type="text" ng-model="formTodoText" placeholder="item">
+    <input type="number" ng-model="formTodoImportance" placeholder="importance">
+    <button ng-click="addTodo()">Add</button><br>
+    {{formTodoText}}<br>
+    {{formTodoImportance}}
+  </form>
+  <button ng-click="clearCompleted()">Clear Completed</button>
+</div>
