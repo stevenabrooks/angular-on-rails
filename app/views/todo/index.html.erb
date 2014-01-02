@@ -3,15 +3,17 @@
   <ul>
     <li ng-repeat="todo in todos | orderBy:'-importance'">
       <input type="checkbox" ng-model="todo.done">
-      <span class="done-{{todo.done}}">{{todo.text}} - {{todo.importance}}</span>
+      <span class="done-{{todo.done}}">{{todo.title}} - {{todo.importance}}</span>
     </li>
   </ul>
   <form class="form-inline">
-    <input type="text" ng-model="formTodoText" placeholder="item">
-    <input type="number" ng-model="formTodoImportance" placeholder="importance">
-    <button ng-click="addTodo()">Add</button><br>
-    {{formTodoText}}<br>
-    {{formTodoImportance}}
+    <input type="text" ng-model="newTodo.title" placeholder="item">
+    <input type="text" ng-model='newTodo.description' placeholder="description">
+    <input type="number" ng-model="newTodo.importance" placeholder="importance">
+    <button ng-click="addTodo()">Add Item</button><br>
+    {{newTodo.title}}<br>
+    {{newTodo.description}}<br>
+    {{newTodo.importance}}
   </form>
-  <button ng-click="clearCompleted()">Clear Completed</button>
+  <button ng-click="clearCompleted()">Clear Completed Items</button>
 </div>
