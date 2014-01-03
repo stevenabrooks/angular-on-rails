@@ -1,4 +1,4 @@
-app = angular.module("Todo", ["ngResource"])
+angular.module("Todo", ["ngResource"])
 
 function TodoController($scope, $filter, $resource) {
   Todo = $resource("/todos/:id", {id: "@id"}, {update: {method: 'PUT'}})
