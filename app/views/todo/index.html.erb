@@ -1,5 +1,5 @@
 <div ng-controller="TodoController">
-  <h2 id="forms-example">Total todos: {{getTotalTodos()}}</h2>
+  <h2 class="index_header">Total todos: {{getTotalTodos()}}</h2>
   <ul>
     <li ng-repeat="todo in todos | orderBy:'-importance'">
       <input type="checkbox" ng-model="todo.done">
@@ -7,13 +7,13 @@
     </li>
   </ul>
   <form class="form-inline">
-    <input type="text" ng-model="newTodo.title" placeholder="item">
-    <input type="text" ng-model='newTodo.description' placeholder="description">
-    <input type="number" ng-model="newTodo.importance" placeholder="importance">
-    <button ng-click="addTodo()">Add Item</button><br>
-    {{newTodo.title}}<br>
+    <input type="text" ng-model="newTodo.title" placeholder="item" class="placeholder">
+    <input type="text" ng-model='newTodo.description' placeholder="description" class="placeholder">
+    <input type="number" ng-model="newTodo.importance" placeholder="importance" class="placeholder">
+    <button class="styled-button-2" ng-click="addTodo()">Add Item</button><br>
+    <span class="binding">{{newTodo.title}}</span><br>
     {{newTodo.description}}<br>
     {{newTodo.importance}}
   </form>
-  <button ng-click="clearCompleted()">Clear Completed Items</button>
+  <button class="styled-button-5" ng-click="clearCompleted()">Clear Completed Items</button>
 </div>
