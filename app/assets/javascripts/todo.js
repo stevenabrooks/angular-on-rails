@@ -13,8 +13,8 @@ function TodoController($scope, $filter, $resource) {
 };
 
   $scope.addTodo = function () {
-    Todo.save({title:$scope.newTodo.title, importance:$scope.newTodo.importance, description:$scope.newTodo.description, done:false})
-    $scope.todos.push({title:$scope.newTodo.title, importance:$scope.newTodo.importance, description:$scope.newTodo.description, done:false});
+    entry = Todo.save({title:$scope.newTodo.title, importance:$scope.newTodo.importance, description:$scope.newTodo.description, done:false})
+    $scope.todos.push(entry);
     $scope.newTodo.title = '';
     $scope.newTodo.importance = '';
     $scope.newTodo.description = '';
