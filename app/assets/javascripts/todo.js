@@ -9,6 +9,7 @@ function TodoController($scope, $filter, $resource) {
   };
 
   $scope.clearCompleted = function () {
+    Todo.save({done:true})
     $scope.todos = $filter("filter")($scope.todos, {done:false});
 };
 
