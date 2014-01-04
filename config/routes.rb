@@ -1,4 +1,7 @@
 Angular::Application.routes.draw do
+  resources :users
+
+
   resources :todos
 
   match 'todo' => 'todo#index'
