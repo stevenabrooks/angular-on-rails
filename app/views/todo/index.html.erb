@@ -3,7 +3,7 @@
   <ul>
     <li ng-repeat="todo in todos | orderBy:'-importance'">
       <input type="checkbox" ng-model="todo.done">
-      <span class="done-{{todo.done}}">{{todo.title}} - {{todo.importance}}</span>
+      <span class="done-{{todo.done}} todos">{{todo.title}} - {{todo.importance}}</span>
     </li>
   </ul>
   <form class="form-inline">

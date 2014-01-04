@@ -1,8 +1,7 @@
 Angular::Application.routes.draw do
   resources :todos
 
-
-  root :to => 'todo#index'
+  match 'todo' => 'todo#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
