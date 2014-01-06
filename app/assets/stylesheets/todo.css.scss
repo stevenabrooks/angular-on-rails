@@ -64,6 +64,11 @@ input:focus {
     font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
 }
 
+.done-true {
+  color: grey;
+  text-decoration: line-through;
+}
+
 li {
   list-style-type: none;
 }
