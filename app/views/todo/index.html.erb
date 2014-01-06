@@ -2,7 +2,7 @@
   <h2 class="index_header">Total todos: {{getTotalTodos()}}</h2>
   <ul>
     <li ng-repeat="todo in todos | orderBy:'-importance'">
-      <input type="checkbox" ng-model="todo.done">
+      <input type="checkbox" ng-model="todo.done" value="something">
       <span class="done-{{todo.done}} todos">{{todo.title}} - {{todo.importance}}</span>
     </li>
   </ul>

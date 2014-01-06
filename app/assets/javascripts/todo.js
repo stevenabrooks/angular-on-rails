@@ -1,7 +1,7 @@
 angular.module("Todo", ["ngResource"])
 
 function TodoController($scope, $filter, $resource) {
-  Todo = $resource("/todos.json", {id: "@id"}, {update: {method: 'PUT'}})
+  Todo = $resource("/todos.json", {update: {method: 'PUT'}})
     $scope.todos = Todo.query()
 
   $scope.getTotalTodos = function () {
@@ -9,7 +9,7 @@ function TodoController($scope, $filter, $resource) {
   };
 
   $scope.clearCompleted = function () {
-    Todo.save({done:true})
+    // Todo.save({done:true})
     $scope.todos = $filter("filter")($scope.todos, {done:false});
 };
 
