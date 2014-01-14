@@ -1,12 +1,12 @@
 class TodosController < ApplicationController
-  respond_to :json
+  # respond_to :json
 
   def index
-    respond_with Todo.all
+    render json: Todo.all
   end
 
   def show
-    respond_with Todo.find(params[:id])
+    render json: Todo.find(params[:id])
   end
 
   def create
@@ -14,7 +14,7 @@ class TodosController < ApplicationController
   end
 
   def update
-    respond_with Todo.update(parms[:id], params[:todo])
+    render json: Todo.update(params[:id], params[:todo])
   end
 
   def destroy
